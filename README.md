@@ -3,7 +3,7 @@
 **Author**: Oliver Eielson
 
 ---
-[View the PDF](Images/fish_net.pdf)
+[View the PDF](images/fish_net.pdf)
 ---
 
 ## Abstract
