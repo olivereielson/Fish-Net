@@ -1,8 +1,9 @@
 
 # Training Fish-Net to Predict Optimal Fishing Locations from Bathymetric Maps
-
 **Author**: Oliver Eielson
 
+---
+[View the PDF](Images/fish_net.pdf)
 ---
 
 ## Abstract
