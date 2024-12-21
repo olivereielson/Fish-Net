@@ -14,8 +14,6 @@ This paper introduces **Fish-Net**, an adaptation of ResNet designed to predict 
 ## Introduction
 Fish-Net was developed to improve the identification of ideal fishing spots by decreasing the time and effort currently required for identification. Traditionally, fishermen spend considerable time exploring and testing locations through trial and error. In testing, Fish-Net was able to predict fishing locations for the entire state of Rhode Island in just minutes. In addition to saving time, Fish-Net provides valuable insights into remote and unsurveyed areas. Fish-Net was trained on a Navionics[^1] bathymetric chart tiles dataset and AIS data from professional fishing boats. This unique approach allows the model to leverage the knowledge of the professional fishing industry to learn patterns in underwater topology.
 
-[^1]: [Navionics](https://www.navionics.com/)
-
 ---
 
 ## Data
@@ -44,7 +42,7 @@ Fish-Net uses a **ResNet50 backbone pretrained on the COCO dataset**. The final 
 
 To keep the dimensionality of labels consistent during training, images that have fewer bounding boxes than the maximum required are padded with “background” bounding boxes labeled as -1. These padding labels are effectively ignored during training but maintain uniform label dimensionality.
 
-![images/model.png](images/model.png)
+<img src="images/model.png" alt="Fish-Net Model Diagram" width="500">
 
 This diagram illustrates the fasterrcnn_resnet50_fpn
 architecture on which Fish-Net is based.
@@ -62,7 +60,7 @@ Below is an example plot of the training and evaluation loss:
 
 Figure 2: Training and evaluation loss per epoch
 
-![Loss](images/loss.png)
+<img src="images/loss.png" alt="Training and Evaluation Loss Graph" width="500">
 
 The x-axis represents the number of epochs (0-10),
 and the y-axis represents the loss values.
@@ -72,7 +70,7 @@ Additionally, Fish-Net’s **mAP** was monitored during training:
 
 Figure 3: Fish-Net's mAP during training
 
-![Placeholder for mAP Plot](images/map.png)
+<img src="images/map.png" alt="mAP Plot" width="500">
 
 The x-axis represents the number of epochs,
 and the y-axis represents the mAP.
