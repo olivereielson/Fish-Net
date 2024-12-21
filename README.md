@@ -43,15 +43,11 @@ Fish-Net uses a **ResNet50 backbone pretrained on the COCO dataset**. The final 
 
 To keep the dimensionality of labels consistent during training, images that have fewer bounding boxes than the maximum required are padded with “background” bounding boxes labeled as -1. These padding labels are effectively ignored during training but maintain uniform label dimensionality.
 
-<details>
-<summary>Figure 1: The <em>fasterrcnn_resnet50_fpn</em> model architecture</summary>
-
-[Placeholder for model.png]
+![images/model.png](images/model.png)
 
 This diagram illustrates the fasterrcnn_resnet50_fpn
 architecture on which Fish-Net is based.
 
-</details>
 
 ### Hyper-Parameters
 Because Fish-Net uses a pretrained backbone, only **ten epochs** of training were necessary. A **learning rate of 1** was used, alongside **gradient clipping**. A **step size of 5**, **weight decay of 0.005**, and **Stochastic Gradient Descent (SGD)** optimizer were utilized. The relatively high weight decay helped compensate for errors in the dataset, which is discussed later.
@@ -66,7 +62,7 @@ Below is an example plot of the training and evaluation loss:
 <details>
 <summary>Figure 2: Training and evaluation loss per epoch</summary>
 
-[Placeholder for Training Loss Plot]
+![Loss](images/model.png)
 
 The x-axis represents the number of epochs (0-10),
 and the y-axis represents the loss values.
@@ -78,7 +74,7 @@ Additionally, Fish-Net’s **mAP** was monitored during training:
 <details>
 <summary>Figure 3: Fish-Net's mAP during training</summary>
 
-[Placeholder for mAP Plot]
+![Placeholder for mAP Plot](images/map.png)
 
 The x-axis represents the number of epochs,
 and the y-axis represents the mAP.
@@ -95,10 +91,9 @@ The **mAP** started out low, remained stagnant initially, and then began to incr
 ### Comparison with Professional Surveys
 In real-world testing, Fish-Net’s predictions on chart tiles of **Narragansett Bay, RI** were compared with Captain Seagull’s Sports Fishing survey results. Fish-Net’s predictions aligned almost perfectly with the survey, as shown in the figure below. Notably, Fish-Net also identified several locations that Captain Seagull’s survey missed.
 
-<details>
-<summary>Figure 4: Captain Seagull Sports Fishing vs Fish-Net</summary>
+Figure 4: Captain Seagull Sports Fishing vs Fish-Net</summary>
 
-[Placeholder for screenshot comparison]
+![Placeholder for screenshot comparison](images/Screenshot%202023-12-17%20at%201.11.31%20PM.png)
 
 The left image shows Captain Seagull’s Sports Fishing map
 (purple = good fishing spots).
@@ -107,22 +102,17 @@ Circled areas indicate spots Fish-Net identified that
 the survey missed, which the author confirms are good
 fishing locations.
 
-</details>
 
 ### Comparison with Fishbrain AI
 Fish-Net was benchmarked against **Fishbrain**’s AI predictions, a popular fishing application’s proprietary model. As illustrated below, Fishbrain’s AI fails to accurately identify most of the same fishing spots recommended by Captain Seagull’s Sports Fishing; it often mislabels features like boat wakes as good fishing locations. By contrast, Fish-Net’s predictions closely match those of the professional survey.
 
-<details>
-<summary>Figure 5: Fishbrain vs Fish-Net</summary>
-
-[Placeholder for FishBrain.png]
+Figure 5: Fishbrain vs Fish-Net
+![Placeholder for FishBrain.png](images/FishBrain.png)
 
 The left image shows Fishbrain’s AI predictions (orange),
 while the right image shows Fish-Net’s predictions (orange).
 Fishbrain’s results do not align with the survey-proven spots,
 whereas Fish-Net’s do.
-
-</details>
 
 ---
 
