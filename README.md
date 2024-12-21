@@ -89,7 +89,7 @@ In real-world testing, Fish-Net’s predictions on chart tiles of **Narragansett
 
 Figure 4: Captain Seagull Sports Fishing vs Fish-Net</summary>
 
-![Capt](images/Screenshot%202023-12-17%20at%201.11.31%20PM.png)
+![Capt](images/Screenshot%202023-12-17%20at%201.11.31 PM.png)
 
 The left image shows Captain Seagull’s Sports Fishing map
 (purple = good fishing spots).
