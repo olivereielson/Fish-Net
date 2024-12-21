@@ -59,27 +59,23 @@ Fish-Net’s performance was evaluated on separate training and validation datas
 
 Below is an example plot of the training and evaluation loss:
 
-<details>
-<summary>Figure 2: Training and evaluation loss per epoch</summary>
+Figure 2: Training and evaluation loss per epoch
 
-![Loss](images/model.png)
+![Loss](images/loss.png)
 
 The x-axis represents the number of epochs (0-10),
 and the y-axis represents the loss values.
 
-</details>
 
 Additionally, Fish-Net’s **mAP** was monitored during training:
 
-<details>
-<summary>Figure 3: Fish-Net's mAP during training</summary>
+Figure 3: Fish-Net's mAP during training
 
 ![Placeholder for mAP Plot](images/map.png)
 
 The x-axis represents the number of epochs,
 and the y-axis represents the mAP.
 
-</details>
 
 ---
 
@@ -93,7 +89,7 @@ In real-world testing, Fish-Net’s predictions on chart tiles of **Narragansett
 
 Figure 4: Captain Seagull Sports Fishing vs Fish-Net</summary>
 
-![Placeholder for screenshot comparison](images/Screenshot%202023-12-17%20at%201.11.31%20PM.png)
+![Capt](images/Screenshot%202023-12-17%20at%201.11.31%20PM.png)
 
 The left image shows Captain Seagull’s Sports Fishing map
 (purple = good fishing spots).
